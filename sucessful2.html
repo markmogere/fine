@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport", content="width=device-width ,initial-scale=1.0">
+	<title>Successful Animation</title>
+	<style>
+		.success-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		
+		.success-icon {
+			fill: #2ecc71;
+			width: 80px;
+			height: 80px;
+			margin-bottom: 20px;
+		}
+		
+		.success-message {
+			font-family: verdana;
+			color: #555;
+            font-size: 20px;
+            text-align: center;
+		}
+		
+		.success-message span {
+			font-weight: bold;
+			color: #2ecc71;
+		}
+		
+		@keyframes drawCheck {
+			0% {
+				stroke-dashoffset: 1000;
+			}
+			100% {
+				stroke-dashoffset: 0;
+			}
+		}
+		
+		.checkmark {
+			stroke-width: 6;
+			stroke: #2ecc71;
+			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+			animation: drawCheck 0.5s ease-in-out forwards;
+		}
+	</style>
+</head>
+<body>
+	<div class="success-container">
+		<svg class="success-icon" viewBox="0 0 80 80">
+			<path class="checkmark" fill="none" d="M25,45 L35,55 L55,25"></path>
+		</svg>
+		<div class="success-message" ><span>Your details have been submitted successfully!</span> <br> <strong>Thank your for choosing MarkJunior School</strong></div>
+	</div>
+
+	<script>
+		setTimeout(function() {
+			window.location.href = "HOMEPAGE.HTML";
+		}, 3000);
+	</script>
+</body>
+</html>
